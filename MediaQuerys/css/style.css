@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+}
+
+.title h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #666;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ddd;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.main {
+    width: 70%;
+}
+
+.main article {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.main article img {
+    width: 150px;
+    height: auto;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar .banner {
+    background-color: #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.titulo {
+    color: red;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .main {
+        width: 60%;
+    }
+    .sidebar {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main article {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main {
+        width: 50%;
+    }
+    .sidebar {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .nav ul {
+        display: none;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .main, .sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 0 10px;
+    }
+    .main article img {
+        width: 100%;
+    }
+}
